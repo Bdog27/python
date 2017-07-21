@@ -7,7 +7,6 @@ def three(y):
 
 """def cube(x):
     return x**3
-
 def three(x):
     if x%3 == 0:
         return cube(x)
@@ -18,15 +17,13 @@ print (maximum)
     
 minimum = min(17,43,55,56)
 print (minimum)
-
 absolute = abs(-554)
 print (absolute)
-
 print (type("alex"))"""
 
 
-def hotel_cost(nights):
-    return nights*150
+def hotel_cost(days):
+    return days*150
 
 def plane_cost(city):
     if city == "Chicago":
@@ -46,14 +43,12 @@ def car_cost(days):
         return price - 20
     else:
         return price
-    
 
-
-
-    
-"""city = input("what city would you like to stay in")
-nights = int(input("How many nights would you like to stay?"))"""
-
-
-
-
+def total_cost():
+    askcity = input("what city would you like to stay in")
+    askdays = int(input("How many days would you like to stay?"))
+    hotelcost = hotel_cost(askdays)
+    planecost = plane_cost(askcity)
+    carcost = car_cost(askdays)
+    total = hotelcost + planecost + carcost
+    return(total)
